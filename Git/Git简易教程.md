@@ -65,3 +65,7 @@ Git简易教程
     上述命令其实相当于`git fetch` 和 `git merge`
     在实际使用中，`git fetch`更安全一些
     因为在merge前，我们可以查看更新情况，然后再决定是否合并
+
+### 新建、删除远程分支
+`git push origin <branch-name>` 可以把本地分支推送到远程分支
+`git push --delete origin <branch-name>` 可以删除指定的远程分支
