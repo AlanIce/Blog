@@ -69,3 +69,16 @@ Git简易教程
 ### 新建、删除远程分支
 `git push origin <branch-name>` 可以把本地分支推送到远程分支
 `git push --delete origin <branch-name>` 可以删除指定的远程分支
+
+## bug分支
+
+`git stash` 可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+
+`git stash list` 命令看看刚才的工作现场
+
+`git stash apply` 恢复工作现场，但是恢复后`stash`内容并不删除，需要用`git stash drop`来删除
+
+`git stash pop` 恢复的同时把stash内容也删了
+
+
+
