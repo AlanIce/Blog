@@ -1,6 +1,7 @@
-ubuntu12.04.4安装tcl/tk和Tkinter
-===============================
+ubuntu16.04相关问题
+==================
 
+# ubuntu16.04安装tcl/tk和Tkinter
 ## 问题描述：
 
 运行python文件时出现以下信息：
@@ -59,5 +60,19 @@ ImportError: No module named _tkinter
     ```
     ./configure
     make
-    sudo make install  
+    sudo make install
     ```
+
+
+# Ubuntu下Chrome使用Flash
+
+1. 首先下载pep版的flash解压之后放/opt/google/chrome/PepperFlash目录，PepperFlash这个文件夹现在是没有里需要自己新建的，然后把解压出来的libpepflashplayer.so和manifest.json文件放/PepperFlash目录里（这些步骤需要root权限）
+
+2. 打开/usr/share/applications目录，找到GoogleChrome的启动器，右键--属性，在命令这行后面加入 --ppapi-flash-path=/opt/google/chrome/PepperFlash/libpepflashplayer.so 记住空格隔开（这里也要root权限操作，用文本编辑器也可以修改）然后保存。
+
+
+# Ubuntu终端显示Git的分支
+
+在~/目录下的.bashrc末尾加上如下
+`PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '`
+

@@ -43,6 +43,7 @@ Git简易教程
 登陆GitHub，打开“Account settings”，“SSH Keys”页面，然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容点“Add Key”，你就应该看到已经添加的Key。
 
 ## 远程仓库的推送和抓取
+
 `git remote add origin git@github.com:michaelliao/learngit.git`添加远程仓库
 
 `git push -u origin master`第一次推送master分支的所有内容
@@ -52,7 +53,7 @@ Git简易教程
 `git clone`克隆一个本地库
 
 ### git pull 和 git fetch 的区别
- 1. `git fetch`相当于是从远程获取最新版本到本地，不会自动merge
+1. `git fetch`相当于是从远程获取最新版本到本地，不会自动merge
 
     ```
     Git fetch origin master
@@ -70,10 +71,9 @@ Git简易教程
     git diff tmp 
     git merge tmp
     ```
-
     从远程获取最新的版本到本地的test分支上,之后再进行比较合并
     
- 2. `git pull`相当于是从远程获取最新版本并merge到本地
+2. `git pull`相当于是从远程获取最新版本并merge到本地
     `git pull origin master`
     上述命令其实相当于`git fetch` 和 `git merge`
     在实际使用中，`git fetch`更安全一些
