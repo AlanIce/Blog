@@ -13,6 +13,9 @@
  * 查看授予的权限
  `show grants for root@'localhost';`
 
+ * 删除用户
+ `Delete FROM user Where User='test' AND Host='localhost';`
+
 # 二、 表结构变更类
  * 更改表名
  `alter table tablename rename tablenewname;`
@@ -29,3 +32,7 @@
 # 三、 数据存取类
  * 从数据库里随机读取几条数据
  `SELECT * FROM table order by rand() limit 20; `
+
+# 四、 数据库编码类
+ * 创建UTF-8数据库
+ `CREATE DATABASE dbname DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
