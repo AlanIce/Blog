@@ -94,4 +94,8 @@ Git简易教程
 `git stash pop` 恢复的同时把stash内容也删了
 
 
+## 只提交一次的文件
 
+`git update-index --assume-unchanged FILENAME`忽略已经提交的文件
+
+`git update-index --no-assume-unchanged FILENAME`重新track相关文件
