@@ -156,13 +156,15 @@ Centos上面默认的Python版本是2.6，本文介绍如何安装3.4版本。
 
 yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make
 1. 下载Python3.4源码
-# wget http://mirrors.sohu.com/python/3.4.1/Python-3.4.1.tar.xz
+`wget http://mirrors.sohu.com/python/3.4.1/Python-3.4.1.tar.xz`
 2. 解压缩并安装
-# xz -d Python-3.4.1.tar.xz
-# tar xf Python-3.4.1.tar -C /usr/local/src/
-# cd /usr/local/src/Python-3.4.1/
-# ./configure --prefix=/usr/local/python34
-# make -j8 && make install
+```
+xz -d Python-3.4.1.tar.xz
+tar xf Python-3.4.1.tar -C /usr/local/src/
+cd /usr/local/src/Python-3.4.1/
+./configure --prefix=/usr/local/python34
+make -j8 && make install
+```
 3. 安装的目录
 默认情况下，python会安装在
 

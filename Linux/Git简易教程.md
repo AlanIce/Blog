@@ -99,3 +99,45 @@ Git简易教程
 `git update-index --assume-unchanged FILENAME`忽略已经提交的文件
 
 `git update-index --no-assume-unchanged FILENAME`重新track相关文件
+
+
+## 删除远程分支和tag
+
+在Git v1.7.0 之后，可以使用这种语法删除远程分支：
+`git push origin --delete <branchName>`
+可以使用这种语法，推送一个空分支到远程分支，其实就相当于删除远程分支：
+`git push origin :<branchName>`
+
+删除tag的方法，推送一个空tag到远程tag,两种语法作用完全相同。：
+`git push origin --delete tag <tagname>`
+`git tag -d <tagname>`
+`git push origin :refs/tags/<tagname>`
+
+## 删除不存在对应远程分支的本地分支
+
+使用 `git remote prune origin` 可以将其从本地版本库中去除。
+
+更简单的方法是使用这个命令，它在fetch之后删除掉没有与远程分支对应的本地分支`git fetch -p`
+
+## 重命名远程分支
+
+在git中重命名远程分支，其实就是先删除远程分支，然后重命名本地分支，再重新提交一个远程分支。
+
+例如下面的例子中，我需要把 devel 分支重命名为 develop 分支：
+
+删除远程分支：
+`git push --delete origin devel`
+
+重命名本地分支：
+`git branch -m devel develop`
+
+推送本地分支：
+`git push origin develop`
+
+## 把本地tag推送到远程
+
+`git push --tags`
+
+## 获取远程tag
+
+`git fetch origin tag <tagname>`
