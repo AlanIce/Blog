@@ -76,3 +76,9 @@ ImportError: No module named _tkinter
 在~/目录下的.bashrc末尾加上如下
 `PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '`
 
+# Ubuntu更新Git
+```
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git
+```
